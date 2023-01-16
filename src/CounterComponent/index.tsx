@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useState } from 'react';
 import './counter.css';
 
 type CounterProprsType = {
@@ -7,11 +7,26 @@ type CounterProprsType = {
 };
 
 export const CounterComponent = (props: CounterProprsType) => {
-  const { count, title } = props;
+  const { title } = props;
+
+  const [count, setCount] = useState(0);
+
+  const incremetHandler = () => {
+    setCount((prev) => prev + 1);
+    // setCount((prev) => prev + 1);
+  };
+
+  const decrementHandler = () => {
+    setCount((prev) => prev - 1);
+  };
   return (
     <div className="counter_wrapper">
       <h1>{title}</h1>
-      <h2>{count} шт</h2>
+      <div className="counter_group">
+        <button onClick={decrementHandler}>remove</button>
+        <h2>{count} шт</h2>
+        <button onClick={incremetHandler}>add</button>
+      </div>
     </div>
   );
 };
