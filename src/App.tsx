@@ -1,6 +1,7 @@
 import React from 'react';
 import './App.css';
 import { CounterComponent } from './CounterComponent';
+import { Input } from './input';
 
 function App() {
   const handler = () => {
@@ -16,6 +17,7 @@ function App() {
           <button onClick={handler}>PUSH ME</button>
         </p>
       </div>
+      <Input/>
     </div>
   );
 }
