@@ -17,7 +17,9 @@ function App() {
           <button onClick={handler}>PUSH ME</button>
         </p>
       </div>
-      <Input/>
+      <Input />
+
+      <img src={'/img.jfif'} alt="image" />
     </div>
   );
 }
