@@ -5,13 +5,13 @@
   align-items: center;
   justify-content: space-between;
   background-color: rgb(65, 65, 107);
-}
 
-.header .logo {
-  color: red;
-  font-size: 20px;
-}
+  &_title {
+    color: chocolate;
+  }
 
-.header .title {
-  color: chocolate;
+  &_logo {
+    color: red;
+    font-size: 20px;
+  }
 }
