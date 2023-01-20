@@ -1,3 +1,4 @@
+import { routes } from 'Helpers/Constants/roustes';
 import React from 'react';
 import { Link } from 'react-router-dom';
 import style from './PostsList.module.scss';
@@ -15,7 +16,7 @@ export const PostsList = () => {
       <p>POST7</p>
       <p>POST8</p>
       <p>POST9</p>
-      <Link to="/">go to main</Link>
+      <Link to={routes.posts}>go to main</Link>
     </main>
   );
 };

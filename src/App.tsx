@@ -3,12 +3,13 @@ import { Main } from 'Containers/Main';
 import { Posts } from 'Containers/Posts';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
+import { routes } from 'Helpers/Constants/roustes';
 
 function App() {
   return (
     <Routes>
-      <Route path="/" element={<Main />} />
-      <Route path="/posts" element={<Posts />} />
+      <Route path={routes.main} element={<Main />} />
+      <Route path={routes.posts} element={<Posts />} />
     </Routes>
   );
 }
