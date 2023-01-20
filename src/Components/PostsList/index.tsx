@@ -16,7 +16,7 @@ export const PostsList = () => {
       <p>POST7</p>
       <p>POST8</p>
       <p>POST9</p>
-      <Link to={routes.posts}>go to main</Link>
+      <Link to={routes.main}>go to main</Link>
     </main>
   );
 };

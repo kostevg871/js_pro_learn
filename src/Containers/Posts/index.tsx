@@ -1,14 +1,11 @@
-import { Footer } from 'Components/Common/Footer';
-import { Header } from 'Components/Common/Header';
+import { PageWrapper } from 'Components/Common/PageWrapper';
 import { PostsList } from 'Components/PostsList';
 import React from 'react';
 
 export const Posts = () => {
   return (
-    <div className='page_wrapper'>
-      <Header/>
-      <PostsList/>
-      <Footer/>
-    </div>
-  )
+    <PageWrapper>
+      <PostsList />
+    </PageWrapper>
+  );
 };
