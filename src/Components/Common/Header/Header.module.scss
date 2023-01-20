@@ -1,17 +1,23 @@
 .header {
-  height: 60px;
-  display: flex;
-  padding: 0 40px;
-  align-items: center;
-  justify-content: space-between;
-  background-color: rgb(65, 65, 107);
+	height: 60px;
+	flex-direction: row;
+	display: flex;
+	padding: 0 40px;
+	align-items: center;
+	justify-content: space-between;
+	background-color: rgb(145, 145, 214);
 
-  &_title {
-    color: chocolate;
-  }
+	&_title {
+		color: chocolate;
+	}
 
-  &_logo {
-    color: red;
-    font-size: 20px;
-  }
+	&_logo {
+		color: red;
+		font-size: 20px;
+	}
+
+	&>ul {
+		display: flex;
+		gap: 18px
+	}
 }
