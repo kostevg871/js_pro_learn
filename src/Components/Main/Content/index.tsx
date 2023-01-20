@@ -1,10 +1,12 @@
 import React from 'react';
-import style from './Content.module.scss'
+import { Link } from 'react-router-dom';
+import style from './Content.module.scss';
 
 export const Content = () => {
   return (
-    <main>
-      <h1 className={style.content}>Main Content</h1>
+    <main className={style.content}>
+      <h1>Main Content</h1>
+      <Link to="/posts">go to posts</Link>
     </main>
   );
 };

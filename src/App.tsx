@@ -1,7 +1,6 @@
-// import { Main } from 'Containers/Main';
+import React from 'react';
 import { Main } from 'Containers/Main';
 import { Posts } from 'Containers/Posts';
-import React from 'react';
 import { Route, Routes } from 'react-router-dom';
 import './App.css';
 
