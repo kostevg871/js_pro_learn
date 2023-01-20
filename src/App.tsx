@@ -2,7 +2,6 @@ import React from 'react';
 import { Main } from 'Containers/Main';
 import { Posts } from 'Containers/Posts';
 import { Route, Routes } from 'react-router-dom';
-import './App.css';
 import { routes } from 'Helpers/Constants/roustes';
 
 function App() {
