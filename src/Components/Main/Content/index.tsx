@@ -1,14 +1,28 @@
 import { CounterComponent } from 'Components/CounterComponent';
-import React from 'react';
+import React, { useEffect, useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import style from './Content.module.scss';
 
 export const Content = () => {
   const navigate = useNavigate();
 
+  const [label, setLabel] = useState('LABEL');
+  useEffect(() => {
+    console.log('MainContent MOUNT');
+  }, []);
+
+  useEffect(() => {
+    console.log('MainContent UPDATE');
+  }, [label]);
+
   return (
     <main className={style.content}>
       <h1>Main Content</h1>
+
+      <p>{label}</p>
+      <button type="button" onClick={() => setLabel((prev) => prev + '_UP')}>
+        SetLabel
+      </button>
 
       <div className={style.content}>
         <CounterComponent title="apple" />

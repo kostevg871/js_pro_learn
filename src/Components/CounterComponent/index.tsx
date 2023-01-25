@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import './counter.css';
 
 type CounterProprsType = {
@@ -10,6 +10,15 @@ export const CounterComponent = (props: CounterProprsType) => {
   const { title } = props;
 
   const [count, setCount] = useState(0);
+
+  useEffect(() => {
+    console.log('CounterComponent MOUNT');
+  }, []);
+
+  useEffect(() => {
+    console.log('CounterComponent UPDATE');
+    return () => console.log('CounterComponent WILL_UPDATE');
+  }, [count]);
 
   const incremetHandler = () => {
     setCount((prev) => prev + 1);
