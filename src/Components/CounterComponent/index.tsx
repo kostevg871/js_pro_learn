@@ -6,7 +6,7 @@ type CounterProprsType = {
   count?: number;
 };
 
-export const CounterComponent = (props: CounterProprsType) => {
+const Counter = (props: CounterProprsType) => {
   const { title } = props;
 
   const [count, setCount] = useState(0);
@@ -40,3 +40,5 @@ export const CounterComponent = (props: CounterProprsType) => {
     </div>
   );
 };
+
+export const CounterComponent = React.memo(Counter);

@@ -15,6 +15,16 @@ export const Content = () => {
     console.log('MainContent UPDATE');
   }, [label]);
 
+  //   const handler = () => console.log(`current label ${label}`);
+
+  //   useEffect(() => {
+  //     document.addEventListener('click', handler);
+
+  //     return () => {
+  //       document.removeEventListener('click', handler);
+  //     };
+  //   }, [label]);
+
   return (
     <main className={style.content}>
       <h1>Main Content</h1>
@@ -25,7 +35,7 @@ export const Content = () => {
       </button>
 
       <div className={style.content}>
-        <CounterComponent title="apple" />
+        <CounterComponent title={label} />
         <CounterComponent title="orange" />
       </div>
       <div className={style.btn_wrapper}>
