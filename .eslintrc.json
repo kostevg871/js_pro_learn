@@ -28,6 +28,8 @@
 		"@typescript-eslint/no-unused-vars": "warn",
 		"no-console": "off",
 		"@typescript-eslint/strict-boolean-expressions": "off",
-		"@typescript-eslint/no-floating-promises": "off"
+		"@typescript-eslint/no-floating-promises": "off",
+		"indent": "off",
+		"@typescript-eslint/indent": "warn"
 	}
 }

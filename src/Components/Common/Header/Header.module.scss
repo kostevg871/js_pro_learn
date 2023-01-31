@@ -1,4 +1,4 @@
-.header {
+.wrapper {
 	height: 60px;
 	flex-direction: row;
 	display: flex;
@@ -7,17 +7,18 @@
 	justify-content: space-between;
 	background-color: rgb(145, 145, 214);
 
-	&_title {
-		color: chocolate;
+	a {
+		color: #fff;
+		text-decoration: none;
 	}
 
-	&_logo {
-		color: red;
-		font-size: 20px;
+
+	&>nav {
+		&>ul {
+			display: flex;
+			list-style: none;
+			gap: 18px;
+		}
 	}
 
-	&>ul {
-		display: flex;
-		gap: 18px
-	}
 }

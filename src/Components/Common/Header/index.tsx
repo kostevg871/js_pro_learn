@@ -5,20 +5,21 @@ import style from './Header.module.scss';
 
 export const Header = () => {
   return (
-    <header className={style.header}>
-      <span className={style.header_logo}>LOGO</span>
-      <ul>
-        <li>
-          <Link to={routes.main}>ГЛАВНАЯ</Link>
-        </li>
-        <li>
-          <Link to={routes.posts}>ПОСТЫ</Link>
-        </li>
-        <li>
-          <Link to="/about">О НАС</Link>
-        </li>
-      </ul>
-      <span className={style.header_title}>APP_NAME</span>
+    <header className={style.wrapper}>
+      <nav>
+        <ul>
+          <li>
+            <Link to={routes.main}>ГЛАВНАЯ</Link>
+          </li>
+          <li>
+            <Link to={routes.posts}>ПОСТЫ</Link>
+          </li>
+          <li>
+            <Link to={routes.notFound}>О НАС</Link>
+          </li>
+        </ul>
+      </nav>
+      <Link to={routes.auth}>Авторизация</Link>
     </header>
   );
 };
