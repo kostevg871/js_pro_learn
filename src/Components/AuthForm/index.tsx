@@ -1,5 +1,7 @@
 import { Input } from 'Components/Common/Input';
 import React, { ChangeEvent, useEffect, useState } from 'react';
+import { useDispatch } from 'react-redux';
+import { UserSliceAction } from 'Store';
 import style from './AuthForm.module.scss';
 
 export const AuthForm = () => {
@@ -14,11 +16,14 @@ export const AuthForm = () => {
     });
   };
 
+  const dispatch = useDispatch();
+
   const submitHandler = () => {
     if (formState.password.length < 5) {
       setErrorMessage('пароль слишком короткий');
     } else {
       setErrorMessage('');
+      dispatch(UserSliceAction.setUserData({ email: formState.email, token: '123' }));
       console.log(formState, 'отправка');
     }
   };
