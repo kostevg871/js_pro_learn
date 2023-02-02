@@ -24,7 +24,7 @@ export const AuthForm = () => {
     } else {
       setErrorMessage('');
       dispatch(UserSliceAction.setUserLoading(true));
-      setTimeout(() => dispatch(UserSliceAction.setUserData({ email: formState.email, token: '123' })), 3000);
+      setTimeout(() => dispatch(UserSliceAction.setUserData({ email: formState.email, token: 'error' })), 3000);
       console.log(formState, 'отправка');
     }
   };
