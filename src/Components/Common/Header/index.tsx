@@ -23,7 +23,7 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      {userEmail ? <span className={style.name}>userEmail</span> : <Link to={routes.auth}>Авторизация</Link>}
+      {userEmail ? <span className={style.name}>{userEmail}</span> : <Link to={routes.auth}>Авторизация</Link>}
     </header>
   );
 };

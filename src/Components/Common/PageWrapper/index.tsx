@@ -11,7 +11,7 @@ export const PageWrapper = ({ children }: PageWraperProprs) => {
   return (
     <div className={style.page_wrapper}>
       <Header />
-      {children}
+      <main className={style.content}>{children}</main>
       <Footer />
     </div>
   );

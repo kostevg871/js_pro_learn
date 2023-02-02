@@ -23,7 +23,8 @@ export const AuthForm = () => {
       setErrorMessage('пароль слишком короткий');
     } else {
       setErrorMessage('');
-      dispatch(UserSliceAction.setUserData({ email: formState.email, token: '123' }));
+      dispatch(UserSliceAction.setUserLoading(true));
+      setTimeout(() => dispatch(UserSliceAction.setUserData({ email: formState.email, token: '123' })), 3000);
       console.log(formState, 'отправка');
     }
   };
