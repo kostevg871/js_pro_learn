@@ -1,12 +1,17 @@
+/* eslint-disable multiline-ternary */
 import { routes } from 'Helpers/Constants/roustes';
 import React from 'react';
-import { useSelector } from 'react-redux';
+import { useDispatch, useSelector } from 'react-redux';
 import { Link } from 'react-router-dom';
-import { UserSelectors } from 'Store';
+import { UserSelectors, UserSliceAction } from 'Store';
 import style from './Header.module.scss';
 
 export const Header = () => {
   const userEmail = useSelector(UserSelectors.getUserEmail);
+  const dispatch = useDispatch();
+  const logoutHandler = () => {
+    dispatch(UserSliceAction.clearUserData());
+  };
 
   return (
     <header className={style.wrapper}>
@@ -23,7 +28,16 @@ export const Header = () => {
           </li>
         </ul>
       </nav>
-      {userEmail ? <span className={style.name}>{userEmail}</span> : <Link to={routes.auth}>Авторизация</Link>}
+      {userEmail ? (
+        <div>
+          <span className={style.name}>{userEmail}</span>
+          <button type={'button'} onClick={logoutHandler}>
+            logout
+          </button>
+        </div>
+      ) : (
+        <Link to={routes.auth}>Авторизация</Link>
+      )}
     </header>
   );
 };
